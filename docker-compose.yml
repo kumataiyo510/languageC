@@ -1,0 +1,15 @@
+version: "3.3"
+services:
+  docker-c:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: docker-c-image
+    container_name: docker-c
+    volumes:
+      - type: bind
+        source: C:\Users\kinta\Documents\docker-c
+        target: /docker-c
+    stdin_open: true
+    tty: true
+    working_dir: /docker-c
